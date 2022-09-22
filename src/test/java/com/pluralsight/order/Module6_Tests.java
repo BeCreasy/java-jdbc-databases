@@ -6,7 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import com.pluralsight.order.dao.InsertOrderDao;
+import com.pluralsight.order.service.dao.InsertOrderDao;
 import com.pluralsight.order.dto.OrderDetailDto;
 import com.pluralsight.order.dto.OrderDto;
 import com.pluralsight.order.util.Database;

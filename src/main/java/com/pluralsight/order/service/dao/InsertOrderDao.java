@@ -1,4 +1,4 @@
-package com.pluralsight.order.dao;
+package com.pluralsight.order.service.dao;
 
 import com.pluralsight.order.dto.OrderDto;
 import com.pluralsight.order.dto.OrderDetailDto;

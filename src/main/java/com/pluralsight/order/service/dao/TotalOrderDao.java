@@ -1,4 +1,4 @@
-package com.pluralsight.order.dao;
+package com.pluralsight.order.service.dao;
 
 import com.pluralsight.order.dto.ParamsDto;
 import com.pluralsight.order.util.Database;

@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
 
-import com.pluralsight.order.dao.TotalOrderDao;
+import com.pluralsight.order.service.dao.TotalOrderDao;
 import com.pluralsight.order.dto.ParamsDto;
 import com.pluralsight.order.util.Database;
 import org.h2.expression.ParameterInterface;

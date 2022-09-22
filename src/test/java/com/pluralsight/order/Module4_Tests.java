@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.pluralsight.order.dao.UpdateOrderDao;
+import com.pluralsight.order.service.dao.UpdateOrderDao;
 import com.pluralsight.order.dto.ParamsDto;
 import com.pluralsight.order.util.Database;
 import org.h2.expression.ParameterInterface;

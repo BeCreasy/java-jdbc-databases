@@ -1,6 +1,6 @@
 package com.pluralsight.order.service;
 
-import com.pluralsight.order.dao.TotalOrderDao;
+import com.pluralsight.order.service.dao.TotalOrderDao;
 import com.pluralsight.order.dto.ParamsDto;
 import com.pluralsight.order.util.Database;
 

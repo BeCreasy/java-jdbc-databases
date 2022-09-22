@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.pluralsight.order.dao.GetOrderDao;
+import com.pluralsight.order.service.dao.GetOrderDao;
 import com.pluralsight.order.dto.OrderDto;
 import com.pluralsight.order.dto.ParamsDto;
 import com.pluralsight.order.util.Database;
