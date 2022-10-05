@@ -65,7 +65,7 @@ public class DeleteOrderDao {
     private PreparedStatement createPreparedStatement(Connection con, List<Long> orderIds) throws SQLException {
         String sql = buildDeleteSql(orderIds);
         PreparedStatement ps = con.prepareStatement(sql);
-        int i = 0;
+        int i = 1;
         for(Long id : orderIds){
             ps.setLong(i++,id);
         }
