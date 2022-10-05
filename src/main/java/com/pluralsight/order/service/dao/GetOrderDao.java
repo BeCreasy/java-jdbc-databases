@@ -4,6 +4,7 @@ import com.pluralsight.order.dto.OrderDto;
 import com.pluralsight.order.dto.ParamsDto;
 import com.pluralsight.order.util.Database;
 import com.pluralsight.order.util.ExceptionHandler;
+import org.h2.jdbc.JdbcConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -33,11 +34,19 @@ public class GetOrderDao {
     public OrderDto getOrderById(ParamsDto paramsDto) {
         OrderDto orderDto = null;
 
-        try (Connection con = null;
+        try (Connection con = database.getConnection();
              PreparedStatement ps = createPreparedStatement(con, paramsDto.getOrderId());
              ResultSet rs = createResultSet(ps)
+
         ) {
 
+            if(rs.next()){
+               orderDto = new OrderDto();
+               orderDto.setOrderId(rs.getLong("order_id"));
+               orderDto.setCustomerId(rs.getLong("order_customer_id"));
+               orderDto.setDate(rs.getTimestamp("order_date"));
+               orderDto.setOrderId(rs.getLong("order_status"));
+            }
         } catch (SQLException ex) {
             ExceptionHandler.handleException(ex);
         }
@@ -54,7 +63,8 @@ public class GetOrderDao {
      */
     private PreparedStatement createPreparedStatement(Connection con, long orderId) throws SQLException {
 
-        return null;
+        PreparedStatement p = con.prepareStatement(query);
+        return p;
     }
 
     /**
@@ -64,6 +74,6 @@ public class GetOrderDao {
      * @throws SQLException In case of an error
      */
     private ResultSet createResultSet(PreparedStatement ps) throws SQLException {
-        return null;
+        return ps.executeQuery();
     }
 }
